@@ -1,0 +1,86 @@
+:root{
+    --color-brand-custumer: #e03232;
+    --size-font-default: 16px;
+}
+
+/* h1{
+    background-color: rebeccapurple;
+    color: white;
+} */
+h2 {
+    color: lightblue;
+}
+h3{
+    color: green;
+}
+.text-blue{
+    color: blue;
+}
+#titolo-numero-2{
+color: chartreuse !important;
+}
+*{
+    color: chocolate;
+}
+div#primo-piano{
+    background-color: blueviolet;
+}
+/* spazio = discendenza */
+/* > = figlio diretto */
+nav#menu-principale li, div > span{
+    font-size: var(--size-font-default);
+}
+/* ~ = fratelli ALT+126 */
+li~li{
+    background-color: aquamarine;
+}
+/* + = fratello adiaciente */
+header+span{
+    background-color: lightgreen;
+}
+h1[lang="en"], nav[lang="en"]{
+    display: none;
+}
+h4{
+    color: var(--color-brand-custumer);
+}
+a{
+    color: var(--color-brand-custumer);
+}
+#menu-principale a:hover{
+    background-color: aqua;
+}
+#menu-principale a:visited{
+    color: blue;
+}
+#menu-principale a:active{
+    background-color: brown;
+    color: white;
+}
+#menu-principale a:link{
+    text-decoration: none;
+}
+span:hover{
+    font-size: 28px;
+}
+
+@media screen and (min-width: 576px){
+    h2 {
+        color: cyan;
+    }    
+}
+@media screen and (min-width: 768px){
+    h2 {
+        color: blue;
+    }    
+}
+@media screen and (min-width: 992px){
+    h2 {
+        color: blueviolet;
+    }    
+}
+@media screen and (min-width: 1200px){
+    h2 {
+        color: gray;
+    }    
+}

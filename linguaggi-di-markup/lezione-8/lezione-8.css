@@ -1,0 +1,103 @@
+/* ul li:nth-child(2){
+    background-color: var(--colore1);
+} */
+/* ul li:nth-child(even){
+    background-color: var(--colore1);
+} */
+ul li:nth-child(3n+1){
+    background-color: var(--colore10);
+}
+div{
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+}
+/* div:empty{
+    background-color: var(--colore6);
+} */
+div:not(.blue){
+    background-color: var(--colore6);
+}
+input:enabled{
+    background-color: var(--colore2);
+}
+input:disabled{
+    background-color: var(--colore9);
+}
+input:checked ~ label{
+    background-color: var(--colore1);
+}
+input[type="checkbox"]{
+    accent-color: var(--colore1);
+}
+p::first-letter{
+    font-size: 3rem;
+}
+p::first-line{
+    text-decoration: underline;
+}
+/* li::after{
+    content: ':)';
+} */
+li:hover::after{
+    content: ' Click!';
+}
+article{
+    border: 1px solid black;
+
+    /* padding: 1rem;
+    padding: 4 lati; */
+    /* padding: 1rem 2rem;
+    padding: top-bottom right-left; */
+    /* padding: 1rem 2rem 3rem;
+    padding: top right-left bottom; */
+    /* padding: 1rem 2rem 3rem 4rem;
+    padding: top right bottom left; */
+
+    /* stessa cosa di: */
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+
+    text-align: justify;
+}
+.centrato{
+    margin: 10px auto;
+    text-align: center;
+    
+}
+.img-fluid{
+    width: 100%;
+    max-width: 640px;
+}
+.overflow{
+    overflow: auto;
+    text-align: justify;
+    width: 80%;
+    max-width: 500px;
+}
+.border-custom{
+    border-top: 5px dashed var(--colore10);
+    border-right: 9px solid var(--colore7);
+    /* border-bottom: 7px groove var(--colore8); */
+    border-bottom-width: 7px;
+    border-bottom-style: dotted;
+    border-bottom-color: var(colore8);
+    border-left: 10px double var(--colore3);
+}
+input{
+    outline: none;
+}
+.button{
+    border: 3px solid var(--colore6);
+    border-radius: 5px;
+    padding: 4px 8px;
+    color: rgba(0, 0, 0, 0.76);
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button:hover{
+    background-color: var(--colore3);
+    color: white;
+}

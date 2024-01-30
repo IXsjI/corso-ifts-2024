@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 3</title>
+    <!-- <base href="/"> -->
+</head>
+<body>
+    <h1>Lezione 3</h1>
+    <h2 id="blocco">Elementi di blocco</h2>
+        <div>contenuto del div</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, obcaecati! Aperiam asperiores, et architecto iusto in quasi voluptatem neque repellendus ut magni commodi nulla consectetur beatae culpa, officia, hic suscipit?</p>
+    <h2 id="inlinea">Elementi in linea</h2>
+    <span>contenuto span 1</span>
+    <span>contenuto span 2</span>
+    <h2 id="liste">Liste</h2>
+    <!-- ordinate -->
+    <ol >
+        <li>punto 1</li>
+        <li>punto 2</li>
+        <li>punto 3</li>
+    </ol>
+    <!-- non ordinate -->
+    <!-- menù -->
+    <nav>
+        <ul id="menù" style="list-style-type: lower-alpha;">
+            <li>
+                <!-- '_blanck'=target -->
+                <a href="azienda.html" target="_blanck">Azienda</a>
+            </li>
+            <li>
+                <a href="la-storia/la-storia.html">Storia</a>
+            </li>
+            <li>
+                <a href="./contatti.html">Contatti</a>
+            </li>
+            <li>
+                <a href="../lezione-2/lezione-2.html">Lezione 2</a>
+            </li>
+            <li>
+                <!-- Funziona con go live quando la cartella root è linguaggi di markup -->
+                <a href="/lezione-1/lezione-1.html">Lezione 1</a>
+            </li>
+            <li>
+                <!-- Ha come cartella root C:\ -->
+                <a href="/Corso/linguaggi-di-markup/lezione-1/lezione-1.html">Lezione 1</a>
+            </li>
+            <li>
+                <a href="https://www.alberghi.it" rel="nofollow">Vai al portale alberghi</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    il tag &lt;strong&gt; read more... &raquo; &laquo;
+    <h2 id="tabella">Tabella</h2>
+    <table border="1">
+        <caption>La mia tabella</caption>
+        <thead>
+            <th>elementi html</th>
+            <th>tipo</th>
+            <th>descrizione</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>p</td>
+                <td rowspan="2">blocco</td>
+                <td>paragrafo</td>
+            </tr>
+            <tr>
+                <td>div</td>
+                <td>panello</td>
+            </tr>
+            <tr>
+                <td>span</td>
+                <td>in linea</td>
+                <td>elemento di testo in linea</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Totali</td>
+                    <td>3</td>
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+    <br>
+    <!-- <iframe src="https://www.google.it" frameborder="0"></iframe> -->
+    <img src="images/azienda.jpg" alt="Immagine dell'azienda" style="zoom: 50%;">
+    <footer>
+        <!-- <a> serve a creare un link -->
+        <a href="https://www.google.it">Autore</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#blocco">Blocco</a>
+                </li>
+                <li>
+                    <a href="#inlinea">Linea</a>
+                </li>
+                <li>
+                    <a href="#liste">Lista</a>
+                </li>
+                <li>
+                    <a href="#tabella">Tabelle</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

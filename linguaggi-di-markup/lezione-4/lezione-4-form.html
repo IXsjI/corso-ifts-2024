@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 4 form</title>
+</head>
+
+<body>
+    <h1>Form</h1>
+    <h2>Ricerca</h2>
+    <!-- il type search aggiunge solo la x per cancellsre i testo inserito rispetto al text -->
+    <input type="search" name="search" id="search">
+    <h2>Accedi</h2>
+    <form name="login" action="http://localhost/linguaggi-di-markup-23-25/login.php" 
+    method="POST" enctype="multipart/form-data" >
+    <!-- il for nel label serve a fere in modo che quando clicchi sul nome viene reindirizzato al l'input
+         o anche come nelle domande a crocette ove quando clicchi sul nome della scelta ti colora la casella  -->
+        <label for="utente">Utente:</label>
+        <input type="text" name="utente" id="utente" autofocus placeholder="Telefono, Nome o Email" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <button type="submit">Accedi</button>
+    </form>
+    <h2>Registrati</h2>
+    <form name="registrati" action="http://localhost/linguaggi-di-markup-23-25/login.php" 
+    method="POST" enctype="multipart/form-data" target="_blank">
+    <fieldset>
+        <legend>Dati anagrafici</legend>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" tabindex="2" autocomplete="off" data-provenienza="emilia romagna">
+        <label for="cognome">Cognome:</label>
+        <input type="text" name="cognome" id="cognome" tabindex="1"><br>
+        <label for="codice-fiscale">Codice Fiscale:</label>
+        <input type="text" name="codice-fiscale" id="codice-fiscale" value="" size="16" maxlength="16" pattern="[A-Z]{6}[\d]{2}[A-Z]{1}[\d]{2}[A-z]{1}[0-9]{3}[A-z]{1}">
+        <label for="data-nasciata">Data di nascita:</label>
+        <input type="date" name="data-nascita" id="data-nascita">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" size="40">
+        <label for="phone">Telefono:</label>
+        <input type="tel" name="phone" id="phone">
+        <label for="website">Sito web:</label>
+        <input type="url" name="website" id="website">
+    </fieldset>
+    <fieldset>
+        <legend>Preferenze</legend>
+        <label for="motto">Il mio motto:</label><br>
+        <textarea name="motto" id="motto" cols="30" rows="10">F</textarea>
+    </fieldset>
+    <fieldset>
+        <legend>Preferenze</legend>
+        <!-- Puoi scrivere in diversi posti contemporaneamente tenendo premuto alt e clicare i punti dove vuoi scrivere -->
+        <input type="checkbox" name="avventura" id="avventura" value="avventura">
+        <label for="avventura">Avventura</label><br>
+        <input type="checkbox" name="giallo" id="giallo" value="giallo">
+        <label for="giallo">Giallo</label><br>
+        <input type="checkbox" name="horror" id="horror" value="horror">
+        <label for="horror">Horror</label><br>
+        <input type="checkbox" name="bambini" id="bambini" value="bambini" disabled>
+        <label for="bambini">Bambini</label>
+        <h3>Aspetto</h3>
+        <label for="colore-preferito">Colore preferito</label>
+        <input type="color" name="colore-preferito" id="colore-preferito">
+        <label for="mese-preferito">Mese preferito</label>
+        <input type="month" name="mese-preferito" id="mese-preferito">
+        <label for="sport">Sport</label>
+        <input list="sport-list" name="sport" id="sport">
+        <!-- datalist a differenza di select è che puoi fare una ricerca sul luogo cioè se scrivi c ti compaiono solo le opzioni che iniziano con c -->
+        <datalist id="sport-list">
+            <option>Calcio</option>
+            <option>Volley</option>
+            <option>Basket</option>
+            <option>Tennis</option>
+            <option>Calcetto</option>
+            <option>Calciobalilla</option>
+        </datalist>
+    
+    </fieldset>
+    <fieldset>
+        <legend>Tipo di azienda</legend>
+        <input type="radio" name="tipo-azienda" id="srl" value="1">
+        <label for="srl">Srl</label><br>
+        <input type="radio" name="tipo-azienda" id="spa" value="2">
+        <label for="spa">Spa</label><br>
+        <input type="radio" name="tipo-azienda" id="snc" value="3">
+        <label for="snc">Snc</label><br>
+    </fieldset>
+    <fieldset>
+        <legend>Auto preferita</legend>
+        <select name="auto-preferita" id="auto-preferita" >
+            <option value="0" disabled selected>-Seleziona-</option>
+            <optgroup label="Lamborghini">
+                <option value="1">Lamborghini 1</option>
+                <option value="2">Lamborghini 2</option>
+            </optgroup>
+            <optgroup label="Ferrari">
+                <option value="3">Ferrari 1</option>
+                <option value="4">Ferrari 2</option>
+            </optgroup>
+            <optgroup label="Pagani">
+                <option value="5">Pagani 1</option>
+                <option value="6">Pagani 2</option>
+            </optgroup>
+            <option value="7">Altro</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Documenti</legend>
+        <label for="carta-identita">Carta di identità</label>
+        <!-- Per inviare qualsiasi tipo di file serve enctype="multipart/form-data" nel form -->
+        <input type="file" name="carta-identita" id="carta-identita" >
+        <input type="hidden" name="id-documento" value="123">
+    </fieldset>
+    <fieldset>
+        <legend>Valuta il servizio</legend>
+        <label for="rating">Valutazione</label>
+        <input type="number" name="rating" id="rating" min="1" max="10" step="2">
+        <label for="rating-clean">Pulizia</label>
+        <input type="range" name="rating-clean" id="rating-clean" min="1" max="10">
+
+    </fieldset>
+    <br>
+    <button type="button" onclick="" disabled>Pulsante con evento java</button>
+    <button type="reset">Pulisce i campi</button>
+    <button type="submit">Invia il form</button>
+    </form>
+    <script>
+        console.log('ciao');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+1-----
+inizio
+variabile A
+var B
+C = A + B
+stampa C
+fine
+2-----
+inizio
+var A
+B = A * 60
+restituisci B
+fine
+3-----
+inizio
+var B
+var H
+A =(B * H) / 2
+fine
+4-----
+inizio
+numero A
+if A>0
+    stampa A
+fine
+5-----
+inizio
+var A
+var B
+if A>B
+     stampa "A è maggiore di B"
+if else B>A 
+     stampa "B è maggiore di A"
+else
+     stampa "B è uguale ad A"
+fine
+6-----
+(inizio
+array
+posizione numero
+var numeri= [A,B,C,D,E]
+X = primo numero
+ciclo che si interrompe quando non ci sono più numeri
+    confronto X con (il primo numero che prendo in considerazione)S
+    if X>S 
+         il successivo numero da prendere in considerazione = S
+    else
+         X=S
+quando non ci sono più numeri restituire X e la sua posizione 
+fine) 
+7-----
+inizio
+var A
+	(caso 1)se A = 1 stampa "gennaio"
+	(caso 2)se A = 2 stampa "febbraio"
+	(caso 3)se A = 3 stampa "marzo"
+	(caso 4)se A = 4 stampa "aprile"
+	(caso 5)se A = 5 stampa "maggio"
+	(caso 6)se A = 6 stampa "giugno"
+	(caso 7)se A = 7 stampa "luglio"
+	(caso 8)se A = 8 stampa "agosto"
+	(caso 9)se A = 9 stampa "settembre"
+	(caso 10)se A = 10 stampa "ottobre"
+	(caso 11)se A = 11 stampa "novembre"
+	(caso 12)se A = 12 stampa "dicembre"
+	(caso 13)se non è nessuno dei casi precedenti stampa "il numero fornito non è valido, inserire un valore tra 1 e 12"
+fine
+8-----
+elenco di numeri
+variabile positivi=0
+posizione=0
+for posizione<=lunghezza elenco
+	if numero nella attuale posizione > 0
+		positivi+1
+		posizione+1
+	else
+		posizione+1
+stampare positivi
+9-----
+stringa 1
+stringa 2
+lunghezza A= 0
+lunghezza B= 0
+conta caratteri stringa 1 = A
+conta caratteri stringa 2 = B
+if A>B
+     stampa A
+if else B>A
+     stampa B
+else
+     stampa "="
