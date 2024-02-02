@@ -71,7 +71,7 @@
     $a = 2;
     $n = 6;
     echo "a = ";
-    for ($m = 0 ; $m <= $n ; $m++){
+    for ($m = 0; $m <= $n; $m++) {
         echo "$a * $m";
         if ($m < $n) {
             echo " + ";
@@ -101,6 +101,23 @@
     echo " il $m ° multiplo di $n da $inizio a $fine è $risultato";
 
 
+
+    //stesso esercizio da terminare a casa con for e while
+    $multipli = 0; //n. multpli trovati
+    $i = $inizio;
+    while ($multipli == $m) {
+        //...
+        $i++;
+        if ($i == $fine) {
+            break;
+        }
+    }
+    for ($i = $inizio; $multipli == $m; $i++) {
+        if ($i == $fine) {
+            break;
+        }
+        //...
+    }
 
     ?>
 </body>

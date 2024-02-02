@@ -78,22 +78,99 @@
     
     //Date 2 var (giorno e mese) stampare la stagione corrente, considerando che il cambio stagione sia sempre il giorno 20 dei mesi di Marzo, Giugno, Settembre, Dicembre.
     echo "<hr>";
-    $mes = 9;
-    $gior = 19;
-    switch ($mes) {
-        case ($mes = 3 && $gior >= 20) || $mes = 4 || $mes = 5 || ($mes = 6 && $gior < 20):
-            echo "Siamo in primavera";
+    $y = 2024;
+    $m = 90;
+    $d = 19;
+    switch ($m) {
+        case 1:
+            $mese = "gennaio";
             break;
-        case ($mes = 6 && $gior >= 20) || $mes = 7 || $mes = 8 || ($mes = 9 && $gior < 20):
-            echo "Siamo in estate";
+        case 2:
+            $mese = "febbraio";
             break;
-        case ($mes = 9 && $gior >= 20) || $mes = 10 || $mes = 11 || ($mes = 12 && $gior < 20):
-            echo "Siamo in autunno";
+        case 3:
+            $mese = "marzo";
             break;
-        case ($mes = 12 && $gior >= 20) || $mes = 1 || $mes = 2 || ($mes = 3 && $gior < 20):
-            echo "Siamo in inverno";
+        case 4:
+            $mese = "aprile";
             break;
+        case 5:
+            $mese = "maggio";
+            break;
+        case 6:
+            $mese = "giugno";
+            break;
+        case 7:
+            $mese = "luglio";
+            break;
+        case 8:
+            $mese = "agosto";
+            break;
+        case 9:
+            $mese = "settembre";
+            break;
+        case 10:
+            $mese = "ottobre";
+            break;
+        case 11:
+            $mese = "novembre";
+            break;
+        case 12:
+            $mese = "dicembre";
+            break;
+        
+        default:
+            $mese = "";
+            echo "Errore il mese deve essere compreso tra 1 e 12 (invece è $m)";
     }
+    switch ($m) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            $giorni_del_mese = 31;
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            $giorni_del_mese = 30;
+            break;
+        case 2:
+            if ($y % 4 == 0) {
+                $giorni_del_mese = 29;
+            }
+            else {
+                $giorni_del_mese = 28;
+            }
+            break;
+        default:
+            echo "Il $m ° mese non ha $d giorni.";
+    }
+    // switch ($m) {
+    //     case 1:
+    //     case 2:
+    //         if ($g >= 1 && $g <=31)
+    //     case 3:
+
+    //     case 4:
+    //     case 5:
+
+    //     case 6:
+
+    //     case 7:
+    //     case 8:
+
+    //     case 9:
+
+    //     case 10:
+    //     case 11:
+
+    //     case 12:
+    // }
 
     ?>
 
