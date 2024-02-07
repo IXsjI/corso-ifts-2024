@@ -19,8 +19,8 @@
     //$a[2] -> rappresenta il 1° elemento che ha il valore 30
 
     echo $a[0];
-    $a[0] = "primo elemento";
-    echo "ora vale" . $a[0]; //nelle versioni precedental php 8 gli array non possono ssere dentro "" o dentro ma con {}
+    $a[0] = "primo elemento ";
+    echo "ora vale " . $a[0]; //nelle versioni precedental php 8 gli array non possono ssere dentro "" o dentro ma con {}
     $a[3] = "quarto elemento";
     $a[] = "elemento in fondo all'array"; //inserimento in fondo all'array  
     //$a[100] = "100";
@@ -101,7 +101,14 @@
         }
     }
     echo "minimo = $minimo (ce ne sono $minimi) - massimo = $massimo";
+    echo "<hr>";
 
+    $ciao[0] = 1;
+    $ciao[1] = 1;
+    $ciao[2] = 1;
+    $ciao[3] = 1;
+
+    print_r($ciao);
 
     ?>
 </body>
