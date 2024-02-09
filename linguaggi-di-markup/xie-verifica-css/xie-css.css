@@ -1,0 +1,217 @@
+html {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+}
+/* header */
+#header {
+    background-color: #F2F2F2;
+    padding: 0.5em;
+    overflow: auto;
+}
+#header div#img-logo {
+    text-align: center;
+    padding: 1em;
+}
+/* menu */
+nav#menu {
+    text-align: center;
+    padding: 0 1em 2.5em;
+}
+nav#menu ul li {
+    display: inline;
+    border-right: 1px solid black ;
+    padding-right: 0.5em;
+    padding-left: 0.2em;
+
+}
+nav#menu ul li a{
+    color: black;
+    text-decoration: none;
+}
+/* banner top */
+#banner-top {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#banner-top div button{
+    border-radius: 3px;
+}
+/* caratteristiche */
+#caratteristiche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin:  30px auto;
+    width: 90%;
+}
+#caratteristiche article{
+    border: 1px solid black;
+    text-align: center;
+    padding: 1em;
+}
+#caratteristiche article h3{
+    padding: 0.5em;
+}
+/* descrizione */
+#descrizione {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    padding-bottom: 2rem;
+    margin: auto;
+}
+/* #descrizione div{
+    border: 1px solid black;
+} */
+#descrizione div.img-strumenti {
+    text-align: center;
+    margin: auto;
+}
+#strumento{
+    width: 50%;
+}
+.chi-siamo  {
+    text-align: center;
+
+}
+.chi-siamo h2 {
+    text-align: left;
+    padding: 0.5em 0;
+}
+.chi-siamo p {
+    text-align: justify;
+}
+.chi-siamo button {
+    padding: 0.5em ;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+/* banner bot */
+#banner-bot {
+    background-image: url(immagini/parallasse.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 250px;
+    position: relative;
+    padding: 2rem;
+/* }
+#banner-bot #contenuto-banner-b{ */
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    padding-bottom: 2rem;
+
+}
+
+#banner-bot form{
+    background-color: orangered;
+    color: white;
+    padding: 2em;
+    border-radius: 15px;
+    z-index: 1;
+}
+#banner-bot form div input.form-control{
+    height: 30px;
+    padding: 0;
+}  
+
+#banner-bot form button{
+    width: 100%;
+    padding: 0.5em;
+}
+
+#banner-bot div.pellicola{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.74);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+#banner-bot div.bttn{
+    z-index: 1;
+    text-align: center;
+    margin: auto;
+    width: 90%;
+
+}
+#banner-bot div button{
+    width: 90%;
+    text-align: left;
+    font-weight: bold;
+}
+footer {
+    background-color: black;
+    overflow: hidden;    
+}
+footer section {
+    color: white;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    width: 90%;
+    margin: auto;
+}
+footer div#info {
+    background-color: white;
+    color: black;
+    text-align: center;
+    /* max-height: a; */
+    overflow: visible;
+
+}
+footer section nav ul li a{
+    color: white;
+    text-decoration: none;
+
+}
+footer section nav {
+    text-align: center;
+    
+}
+footer section nav ul {
+    padding: 0;
+}
+footer section div p{
+    width: 50%;
+    text-align: justify;
+}
+footer div#linea {
+    background-color: black;
+    max-height: 1em;
+    min-height: 1em;
+}
+
+@media screen and (max-width: 768px){
+    #caratteristiche {
+        flex-direction: column;
+    }
+    #descrizione, #banner-bot, footer section  {
+        grid-template-columns: auto;
+    }
+    #banner-bot form {
+        width: 70%;
+        margin: auto;
+    }
+    #banner-bot div button{
+        width: 77%;
+        padding: 0.5em 0;
+        text-align: center;
+        font-size: larger;
+    }
+    #banner-bot div.bttn{
+        padding: 2rem 0 3rem;
+    }
+    footer section nav {
+        text-align: left;
+    }
+    footer {
+        padding: 2rem 0;
+    }
+}
