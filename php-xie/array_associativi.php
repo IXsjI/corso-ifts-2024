@@ -107,16 +107,39 @@
     }
     //in quanti e chi hanno preso il voto maggiore
     
-
+    echo "<hr>";
 
     //per casa 
     //dato un array raggruppare tutti i valori uguali 
     //e indicare di ogni valore quanti ne sono stati trovati
     //es. [12, 5, "mario", 12, "giuseppe",12,5,"mario]
     //creare un array risultato che abbia come chiave il valore e come valore il n. di ripetizioni
-    ['12' => 3, '5' => 2, 'mario' => 2, 'giuseppe' => 1]
+    ['12' => 3, '5' => 2, 'mario' => 2, 'giuseppe' => 1];
 
-        ?>
+    $arr_dati = [12, 5, "mario", 12, "giuseppe",12,5,"mario"];
+    $arr_div = [];
+
+    foreach ($arr_dati as $dato) {
+
+        $trovato = false;
+        foreach ($arr_div as $chiave => $contatore) {
+            if ($dato == $chiave) {
+                $trovato = true;
+                // $contatore++; non fuziona non modifica l'array
+                $arr_div[$chiave]++;
+                break;
+            }
+        }
+        if(!$trovato ){ //"!" negazione (NOT)
+            $arr_div[$dato] = 1;
+        }
+    }
+
+    foreach ($arr_div as $chiave => $contatore) {
+    echo "$chiave: $contatore<br>";
+    }
+    ?>
+
 
 </body>
 
