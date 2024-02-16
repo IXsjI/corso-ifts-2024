@@ -43,7 +43,8 @@ SELECT *
 FROM adventureworksdw2019.dimemployee, adventureworksdw2019.dimsalesterritory
 order by EmployeeKey*/
 
-select t1.*, t2.*
+-- full join in my sql
+/*select t1.*, t2.*
 from adventureworks2019.SalesOrderHeader as t1
 left join adventureworks2019.customer as t2
 		on t1.CustomerID = t2.CustomerID
@@ -51,7 +52,8 @@ union
 select t1.*, t2.*
 from adventureworks2019.Customer as t2
 left join adventureworks2019.SalesOrderHeader as t1
-		on t2.CustomerID = t1.CustomerID        
+		on t2.CustomerID = t1.CustomerID*/        
+
 
 
 
