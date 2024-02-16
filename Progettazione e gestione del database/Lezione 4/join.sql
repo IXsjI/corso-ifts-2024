@@ -24,11 +24,34 @@ right outer join adventureworks2019.currencyrate as cr on soh.CurrencyRateID = c
 order by cr.CurrencyRateID
 limit 50;*/
 
-SELECT ProductKey
+/*SELECT SalesOrderNumber, SalesOrderLineNumber
 FROM adventureworksdw2019.factresellersales
-GROUP BY ProductKey
-HAVING COUNT(*) > 1
+GROUP BY SalesOrderNumber, SalesOrderLineNumber
+-- HAVING COUNT(*) > 1*/
 
+/*SELECT   frs.*
+		,dm.EnglishProductName
+FROM adventureworksdw2019.dimproduct as dm
+RIGHT OUTER JOIN adventureworksdw2019.factresellersales as frs on dm.ProductKey = frs.ProductKey*/
+
+/*SELECT *
+FROM adventureworksdw2019.dimemployee
+CROSS JOIN adventureworksdw2019.dimsalesterritory
+order by EmployeeKey;
+-- stessa cosa di :
+SELECT *
+FROM adventureworksdw2019.dimemployee, adventureworksdw2019.dimsalesterritory
+order by EmployeeKey*/
+
+select t1.*, t2.*
+from adventureworks2019.SalesOrderHeader as t1
+left join adventureworks2019.customer as t2
+		on t1.CustomerID = t2.CustomerID
+union
+select t1.*, t2.*
+from adventureworks2019.Customer as t2
+left join adventureworks2019.SalesOrderHeader as t1
+		on t2.CustomerID = t1.CustomerID        
 
 
 
