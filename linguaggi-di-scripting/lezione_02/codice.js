@@ -140,6 +140,25 @@ console.log(media);
 
 for (let valore of a) {
   if (valore < media) {
-    console.log(valore); 
+    console.log(valore);
   }
 }
+
+//Es 5
+function isNumeroPrimo(numero) {
+  for (let i = parseInt(numero / 2); i > 1; i--) {
+    if (numero % i) {
+      return false;
+    }
+  }
+  return true;
+}
+function isNumeroPrimo(numero) {
+  for (let i = 2; i <= numero / 2; i++) {
+    if (numero % i) {
+      return false;
+    }
+  }
+  return true;
+}
+

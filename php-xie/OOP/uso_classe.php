@@ -12,7 +12,7 @@
 <body>
     <h1>Utilizzo di classi definiti altrove</h1>
     <?php
-    include "../inc/function.php";
+    include "./inc/function.php";
     include "./classe.php"; //require _once
     $p1 = new Persona("Xie", "1999-11-30");
     $p2 = new Persona("Sijie");
