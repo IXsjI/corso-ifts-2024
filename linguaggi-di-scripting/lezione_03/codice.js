@@ -98,7 +98,7 @@ console.log(s);
 //media di una riga
 
 
-let matrice = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+//let matrice = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
 function isArray(m) {
     return typeof m == "object" && typeof m.length == "number";
