@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 5</title>
+</head>
+
+<body>
+    <h1>Form</h1>
+    <form action="inviaDati.php" method="POST">
+        <fieldset>
+            <legend>Dati di contatto</legend>
+            <label for="txtCognome">Cognome</label>
+            <input type="text" name="txtCognome" id="txtCognome" value="Rossi">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </fieldset>
+        <fieldset>
+            <legend>Titolo di studio</legend>
+            <input type="radio" name="radTitoloDiStudio" id="licenzaMedia">
+            <label for="licenzaMedia">Licenza Media</label>
+            <input type="radio" name="radTitoloDiStudio" id="diploma">
+            <label for="diploma">Diploma</label>
+            <input type="radio" name="radTitoloDiStudio" id="laurea">
+            <label for="laurea">Laurea</label>
+
+        </fieldset>
+        <textarea name="commento" id="commento" cols="90" rows="5">Note: </textarea>
+        <section id="pulsanti">
+            <button type="submit">Invia Dati</button>
+            <input type="reset" value="Reimposta Dati">
+        </section>
+    </form>
+</body>
+
+</html>
