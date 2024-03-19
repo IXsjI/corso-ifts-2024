@@ -30,11 +30,30 @@
     //con $_REQUEST non serve differenziare post e get
     if ($_REQUEST) {
         echo "Ciao " . $_REQUEST["txtCognome"] . "! <br> Ecco i dati che hai compilato.<br>";
-        foreach ($_POST as $key => $dato) {
-            echo $key . " => " . $dato . "<br>";
+        foreach ($_REQUEST as $key => $dato) {
+            echo "$key => $dato <br>";
         }
     }
+
+
+    print_r($_FILES);
+    $img = $_FILES['fileImg']['name'];
+    if (!move_uploaded_file($_FILES['fileImg']['tmp_name'], $img)) {
+        echo "errore nel caricamento del file";
+    }else {
+        echo "<img src='$img'> ";
+    }
+    
+    $cv = $_FILES['fileCV']['name'];
+    if (!move_uploaded_file($_FILES['fileCV']['tmp_name'], $cv)) {
+        echo "errore nel caricamento del file";
+    }else {
+        echo "<a href ='$cv' target = '_blank' > Clicca per vedere il CV </a>";
+    }
+
     ?>
+    <hr>
+    <a href="./form.php?email=<?php echo $_REQUEST["email"];?>&txtCognome=<?php echo $_REQUEST['txtCognome'];?>&radTitoloDiStudio=<?php echo $_REQUEST['radTitoloDiStudio']; ?>">Torna al form</a>
 </body>
 
 </html>
