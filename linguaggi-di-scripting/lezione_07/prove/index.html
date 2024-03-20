@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 07</title>
+</head>
+
+<body>
+    <div id="elemento" style="background-color: blue;">Ciao</div>
+    <div><strong id="elemento-strong" class="helloword">Ciao mondo</strong>
+        <div id="elemento-secondario"></div>
+        <div class="helloword"></div>
+    </div>
+    <script>
+        /*for (let index = 0; index < document.body.children.length; index++) {
+            const element = document.body.children[index];
+            alert(element);
+            for (const child of element.children) {
+                alert("Figlio " + child);
+            }
+        }*/
+        /*setTimeout(function () {
+            let divElem = document.getElementById("elemento");
+            divElem.style.background = "red";
+        }, 5000);*/
+
+        /*let strongElement = document.getElementsByTagName("div");
+        console.log(strongElement);*/
+
+        /*let divByClass = document.getElementsByClassName("helloword");
+        console.log(divByClass);*/
+
+        /*let divByClass = document.getElementById("elemento-strong");
+        let parent = divByClass.parentElement;
+        console.log(parent);*/
+
+        //inner modifica dentro il tag senza modificare il tag stesso
+        /*let divElent = document.getElementById("elemento");
+        alert(divElent.innerHTML);
+        divElent.innerHTML = "<h1>Ciao Mondo!</h1>";
+        alert(divElent.innerHTML);*/
+
+        //outer modifica anche il tag
+        /*let divElent = document.getElementById("elemento");
+        alert(divElent.outerHTML);
+        divElent.outerHTML = "<h1>Ciao Mondo!</h1>";
+        alert(divElent.outerHTML);*/
+
+
+    </script>
+</body>
+
+</html>

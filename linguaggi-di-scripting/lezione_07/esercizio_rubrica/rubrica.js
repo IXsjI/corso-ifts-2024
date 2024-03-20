@@ -31,13 +31,10 @@ class Contatto {
 class Rubrica {
     elencoContatti = [];
 
-    visualizzaTuttiContatti(ordinamento) {
-        this.elencoContatti.sort()
-    }
 
     seEsisteNumero(numero) {
         for (const contatto of this.elencoContatti) {
-            if (contatto.numero === numero) {
+            if (contatto.numeroTelefono === numero) {
                 return true;
             }
         }
@@ -53,7 +50,7 @@ class Rubrica {
         return null;
     }
 
-    trovaContattoConIlNome(nome) {
+    /*trovaContattoConIlNome(nome) {
         nome = nome.toLower
         for (const contatto of this.elencoContatti) {
             if (contatto.nome.substr(0, nome.length) === nome) {
@@ -61,9 +58,9 @@ class Rubrica {
             }
         }
         return false;
-    }
+    }*/
 
-    /* più performante - stringa.indexOf(x) controlla se x è presente nella stringa e restituice la posizione in cui si trova nella stringa
+    // più performante - stringa.indexOf(x) controlla se x è presente nella stringa e restituice la posizione in cui si trova nella stringa
     ricercaContatto(query) {
         let risultato = [];
         query = query.toLowerCase();
@@ -76,10 +73,10 @@ class Rubrica {
             }
         }
         return risultato;
-    }*/
+    }
 
     inserisciNuovoContatto(contatto) {
-        if (this.seEsisteNumero(contatto.numeroTelefono == null)) {
+        if (this.seEsisteNumero(contatto.numeroTelefono) == null) {
             this.elencoContatti.push(contatto);
             return true;
         }
@@ -101,9 +98,31 @@ class Rubrica {
     }
 
     stampaContatti(ordinamento) {
-        let fn = ordinamento === "DESC" ? SORT_DESC_CONTATTO : SORT_ASC_CONTATTO ;
+        let fn = ordinamento === "DESC" ? SORT_DESC_CONTATTO : SORT_ASC_CONTATTO;
         this.elencoContatti.sort(fn);
-        this.elencoContatti.forEach(e => console.log(e.toString()));
+        let corpoTabella = document.getElementById("tabella-body");
+
+        // this.elencoContatti.forEach(e => console.log(e.toString()));
+        for (let index = 0; index < this.elencoContatti.length; index++) {
+            const contatto = this.elencoContatti[index];
+            let riga = document.createElement("tr");
+            riga.setAttribute("data-idx", index);
+            let rigaColoreBg = index % 2 === 0 ? "red" : "blue";
+            riga.style.background = rigaColoreBg;
+            this.creaColonna(riga, contatto.nome);
+            this.creaColonna(riga, contatto.cognome);
+            this.creaColonna(riga, contatto.numeroTelefono);
+            corpoTabella.append(riga);
+
+        }
+
+        let loading = document.getElementById("loading");
+        loading.className = "d-none";
     }
 
+    creaColonna(tagRiga, valoreColonna) {
+        let tagColonna = document.createElement("td");
+        tagColonna.innerHTML = valoreColonna;
+        tagRiga.append(tagColonna);
+    }
 }

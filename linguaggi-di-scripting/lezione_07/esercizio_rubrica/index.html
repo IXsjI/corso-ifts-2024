@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <style>
+        .d-none{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading">Caricamento in corso...</div>
+    
+    <table id="tabella">
+        <tbody id="tabella-body">
+        </tbody>
+    </table>
+    <script src="./rubrica.js"></script>
+    <script>
+        setTimeout(function () {
+            let rubrica = new Rubrica();
+            rubrica.inserisciNuovoContatto(new Contatto("Giuseppe", "Rossi", "000000"));
+            rubrica.inserisciNuovoContatto(new Contatto("Giuseppe2", "Rossi2", "000001"));
+            rubrica.inserisciNuovoContatto(new Contatto("Giuseppe", "Rossi", "000002"));
+            rubrica.stampaContatti();
+            // console.log(rubrica);
+        }, 10000);
+    </script>
+</body>
+
+</html>
