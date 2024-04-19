@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatto JSON</title>
+</head>
+<body>
+    <script src="./contatto.js"></script>
+    <script>
+        let a = new Contatto("Sj","X","24");
+        console.log(a.toJson());
+
+        let cont = new Contatto()
+        cont = cont.fromJson("{\"nome\": \"Giulio\", \"cognome\": \"rossi\", \"eta\": 31}");
+        console.log(cont);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>To Do</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lista Todos</h1>
+    </div>
+    <div class="container">
+        Filtra per stato: <select id="filtroPerStato">
+            <option value="-1">Tutte</option>
+            <option value="0">Completato</option>
+            <option value="1">Da fare</option>
+        </select>
+        Testo <input id="testo" name="testo" type="text">
+    </div>
+    </div>
+    <div class="container">
+        <div class="row bg-primary text-white">
+            <div class="col-1">ID</div>
+            <div class="col-2">ID Utente</div>
+            <div class="col-6">Testo</div>
+            <div class="col-1">Stato</div>
+            <div class="col-2">Azioni</div>
+        </div>
+        <div id="listaToDo">
+
+        </div>
+    </div>
+
+    <script src="./toDo.js"></script>
+</body>
+
+</html>
