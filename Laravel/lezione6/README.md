@@ -16,3 +16,6 @@ parte 2
 
 parte 3
 - utilizzare laravel sanctum per proteggere le route
+
+BadMethodCallException: Method Illuminate\Validation\Validator::validateRequred does not exist. in file C:\Corso\Git\corso-ifts-2024\Laravel\lezione6\vendor\laravel\framework\src\Illuminate\Validation\Validator.php on line 1632
+
