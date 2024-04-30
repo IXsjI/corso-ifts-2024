@@ -9,7 +9,7 @@ enum GiorniSettimana {
 }
 
 
-function saluto(giorno: string) {
+function salutoS(giorno: string) {
     giorno = giorno.toUpperCase();
     for (const a in GiorniSettimana) {
         if (giorno == a){
@@ -20,4 +20,4 @@ function saluto(giorno: string) {
 }
 
 
-console.log(saluto("lunedi"))
+console.log(salutoS("lunedi"))
