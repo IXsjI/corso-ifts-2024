@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bd">
+    <button>Fade</button>
+    <div id="divCiao">Ciao</div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        jQuery("button").on("click", function () {
+            jQuery("#divCiao").fadeOut("slow");
+        });
+
+        // jQuery("button").on("click", function () {
+        //     jQuery.ajax({
+        //         type: "POST",
+        //         url: "https://jsonplaceholder.typicode.com//posts",
+        //         data: JSON.stringify({ "title": "ciao" }),
+        //         success: function (resp) {
+        //             console.log(resp);
+        //         },
+        //         dataType: "json"
+        //     });
+        // });
+    </script>
+</body>
+</html>
