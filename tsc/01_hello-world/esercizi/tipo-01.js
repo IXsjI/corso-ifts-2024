@@ -14,3 +14,5 @@ var persona = {
     }
 };
 stampaProprietaPersona(persona);
+
+

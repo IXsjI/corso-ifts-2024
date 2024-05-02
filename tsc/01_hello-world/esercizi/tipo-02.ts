@@ -16,7 +16,7 @@ function salutoS(giorno: string) {
             return GiorniSettimana[a];
         }
     }
-
+    return alert("Dato inserito ERR");
 }
 
 

@@ -12,3 +12,5 @@ function verificaEmail (email: string) {
 }
 
 console.log(verificaEmail(email));
+
+

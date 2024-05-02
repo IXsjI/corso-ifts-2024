@@ -1,11 +1,12 @@
-enum FasciaOraria  {
-    NOTTE = "NOTTE",
-    MATTINO = "MATTINO",
-    POMERIGGIO = "POMERIGGIO",
-    SERA = "SERA",
-    ERROR = "ERROR"
-}
-let ora: string = "19:14";
+var FasciaOraria;
+(function (FasciaOraria) {
+    FasciaOraria["NOTTE"] = "NOTTE";
+    FasciaOraria["MATTINO"] = "MATTINO";
+    FasciaOraria["POMERIGGIO"] = "POMERIGGIO";
+    FasciaOraria["SERA"] = "SERA";
+    FasciaOraria["ERROR"] = "ERROR";
+})(FasciaOraria || (FasciaOraria = {}));
+var ora = "19:14";
 /**
  * data un'ora ritorna la stringa che descrive la fascia oraria
  *
@@ -16,10 +17,10 @@ let ora: string = "19:14";
  * - Sera: 18.00 - 23.00
  * - Notte: 00.00 - 5.59
  */
-function determinaFasciaOraria (ora: string): FasciaOraria {
-    let aOra = ora.split(":");
-    let hh = parseInt(aOra[0]);
-    let mm = parseInt(aOra[1]);
+function determinaFasciaOraria(ora) {
+    var aOra = ora.split(":");
+    var hh = parseInt(aOra[0]);
+    var mm = parseInt(aOra[1]);
     if (hh < 24 && mm < 60 && hh >= 0 && mm >= 0) {
         if (hh > 5 && hh <= 11) {
             return FasciaOraria.MATTINO;
@@ -34,5 +35,4 @@ function determinaFasciaOraria (ora: string): FasciaOraria {
     }
     return FasciaOraria.ERROR;
 }
-
 console.log(determinaFasciaOraria(ora));
