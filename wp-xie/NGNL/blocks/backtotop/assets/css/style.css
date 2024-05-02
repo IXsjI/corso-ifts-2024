@@ -1,0 +1,9 @@
+.wp-block-zavatta-backtotop {    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.wp-block-zavatta-backtotop.hidden {
+    display: none;
+}

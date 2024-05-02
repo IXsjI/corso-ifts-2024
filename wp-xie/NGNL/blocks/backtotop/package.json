@@ -1,0 +1,16 @@
+{
+  "name": "backtotop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@wordpress/i18n": "4.55.0",
+    "@wordpress/scripts": "27.6.0"
+  }
+}
