@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +15,13 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Ciao Mondo';
-}
+  constructor () {
+    let sub$ = interval(1000);
+
+    sub$.subscribe(
+      (x) => {
+        this.title = "Ciao Mondo " + x;
+      }
+    )
+  }
+} 
