@@ -1,0 +1,16 @@
+{
+  "name": "hr",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "description": "",
+  "devDependencies": {
+    "@wordpress/i18n": "4.57.0",
+    "@wordpress/scripts": "27.8.0"
+  }
+}

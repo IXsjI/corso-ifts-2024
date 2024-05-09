@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "title": "HR",
+   	"name": "project/hr",
+   	"description": "Inserisce un riga separetrice",
+    "category": "design",
+	"icon": "minus",
+	"textdomain": "zavatta",
+    "editorScript": "file:./build/index.js",
+    "viewScript": "file:./assets/js/script.js",
+    "editorStyle": "file:./assets/css/editor.css",
+    "style": "file:./assets/css/style.css",
+    "supports": {
+        "anchor": true,
+        "align": true,
+        "color": {
+            "background": true,
+            "text": false
+        }
+    }
+}
+
