@@ -1,0 +1,85 @@
+.bg-calcolatrice{
+    background-color: gray;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 250px;
+    max-height: 400;
+}
+
+.bg-display{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: end;
+}
+
+.btn-reset {
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 42%;
+}
+
+.btn-operazione {
+    background-color: orange;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 25%;
+}
+
+.btn-numero {
+    background-color: lightgray;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 21.6%;
+}
+
+.btn-zero {
+    background-color: lightgray;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 21.6%;
+}
+
+.btn-punto {
+    background-color: lightgray;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 21.6%;
+}
+
+.btn-uguale {
+    background-color: darkgray;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 48.6%;
+}
