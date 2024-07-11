@@ -1,0 +1,53 @@
+<!-- i file di questa cartella sono stati creti con il terminale -->
+<div class="row mt-2">
+  <div class="col">
+    <label>Server Name: (caratteri ammessi:a-z, A-Z, 0-9)</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8">
+    <input
+      type="text"
+      class="form-control"
+      (input)="onUpdateServerName($event)"
+      [style]="stileInput"
+    />
+  </div>
+  <div class="col-4">
+    <button
+      class="btn btn-primary"
+      [disabled]="!allowNewServer"
+      (click)="onCreateServer()"
+    >
+      Add Server
+    </button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p
+      [style]="stileParagrafo"
+      (mouseover)="onMouseOver($event)"
+      (mouseout)="onMouseOut($event)"
+    >
+      {{ serverName }}
+    </p>
+
+    <p *ngIf="serverWasCreated">
+      A new server was created with name: {{ serverName }}
+    </p>
+
+    <p *ngIf="!serverWasCreated">No server created!</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h3>Server List!</h3>
+  </div>
+</div>
+<app-server
+  *ngFor="let server of dataCenterService.getServerList()"
+  [server]="server"
+  (removed)="onServerRemoved($event)"
+></app-server>

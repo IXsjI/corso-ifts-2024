@@ -1,0 +1,69 @@
+<div class="bg-body-secondary container pt-3">
+
+<!--
+  <div id="carouselExampleControlsNoTouching" *ngIf="film != null" class="carousel slide" data-bs-touch="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img [src]="film.imageUrl" class="d-block" height="150px">
+      </div>
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
+
+
+  <div class="row" *ngIf="film != null">
+    <div class="col-3">
+      <img [src]="film.imageUrl" width="100%" />
+
+    </div>
+    <div class="col">
+      <h2>{{ film.name }} ({{ film.year }})</h2>
+      <p>{{ film.description }}</p>
+      <i class="fa-solid fa-star pb-3 " style="color: #ffd43b;"
+      ><span style="color: black; padding-left: 0.2em; ">{{
+        film.rating
+      }}</span>
+    </i>
+      <h3>Cast:</h3>
+      <ul>
+        <li *ngFor="let attore of film.cast">
+          {{ attore }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div
+    class="row p-2 position-absolute top-50 start-50 translate-middle"
+    *ngIf="film == null && errorMessage == null"
+  >
+    Loading...
+    <div class="spinner-border" role="status"></div>
+  </div>
+
+  <div
+    class="alert alert-danger position-absolute top-50 start-50 translate-middle"
+    *ngIf="errorMessage != null"
+  >
+    {{ errorMessage }}
+  </div>
+
+  <div class="row mt-3 mb-3">
+    <a [routerLink]="'/'" class="btn btn-secondary">
+      <i class="fas fa-chevron-left"></i>Elenco Film
+    </a>
+  </div>
+</div>

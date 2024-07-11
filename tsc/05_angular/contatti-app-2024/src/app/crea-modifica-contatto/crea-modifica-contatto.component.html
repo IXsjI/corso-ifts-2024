@@ -1,0 +1,37 @@
+<div class="flex flex-column gap-2">
+  <label for="nome">Nome</label>
+  <input pInputText id="nome" aria-describedby="nome-help" [(ngModel)]="nome" />
+  <small id="nome-help">
+    Inserisci il nome del contatto
+  </small>
+</div>
+
+<div class="flex flex-column gap-2">
+  <label for="telefono">Telefono</label>
+  <input pInputText id="telefono" aria-describedby="telefono-help" [(ngModel)]="telefono" />
+  <small id="telefono-help">
+    Inserisci il telefono del contatto
+  </small>
+</div>
+
+<div class="flex flex-column gap-2">
+  <label for="mail">Email</label>
+  <input pInputText id="mail" aria-describedby="email-help" [(ngModel)]="email" />
+  <small id="email-help">
+    Inserisci la email del contatto
+  </small>
+</div>
+
+<div class="flex flex-column gap-2">
+  <label for="immagine">Immagine</label>
+  <input pInputText id="immagine" aria-describedby="immagine-help" [(ngModel)]="immagine" />
+  <small id="immagine-help">
+    Inserisci l'URL dell'immagine del contatto
+  </small>
+</div>
+
+<p-button severity="success" (click)="onSalva()">
+  <i class="fa-solid fa-pen me-2"></i> Salva
+</p-button>
+
+<p-button icon="pi pi-times" label="Annulla" severity="primary" (click)="onAnnulla()" />

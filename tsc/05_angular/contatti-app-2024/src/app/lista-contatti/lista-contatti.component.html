@@ -1,0 +1,35 @@
+
+<div class="flex flex-column gap-2">
+  <p-floatLabel cless="p-fluid">
+    <input pInputText id="ricerca" aria-describedby="ricerca-help" [(ngModel)]="ricerca" (input)="onRicerca()" />
+    <label for="ricerca">Ricerca</label>
+  </p-floatLabel>
+  <p-button icon="pi pi-search" label="Ricerca" severity="info" (click)="onRicerca()" />
+  <p-button icon="pi pi-plus" label="Aggiungi" severity="success" [routerLink]="'/contatto/new'" />
+  
+</div>
+
+<p-dataView #dv [value]="contattoList">
+  <ng-template pTemplate="list" let-contattoList>
+    <div class="grid grid-nogutter">
+      <div class="col-12" *ngFor="let item of contattoList">
+        <div class="navbar">
+          <div class="relative">
+            <img class="block mx-auto border-round" [src]="item.immagine" [alt]="item.nome" />
+          </div>
+          <div class="flex flex-column">
+            <div class="text-primary text-lg mt-2">{{ item.nome }}</div>
+            <div class="text-secondary text-sm">{{ item.email }}</div>
+            <div class="text-secondary text-sm">{{ item.telefono }}</div>
+          </div>
+          <p-buttonGroup>
+            <p-button severity="primary"  [routerLink]="'/contatto/' + item.id + '/edit'">
+              <i class="fa-solid fa-pen me-2"></i> Modifica
+            </p-button>
+            <p-button icon="pi pi-trash" label="Elimina" severity="danger" />
+          </p-buttonGroup>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-dataView>

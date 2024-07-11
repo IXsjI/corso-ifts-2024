@@ -1,0 +1,47 @@
+<div *ngIf="user != null">
+  <h1
+    class="text-center fw-bold p-3 pt-4 bg-dark text-white rounded-top-2 mb-0"
+  >
+    {{ user.name?.first }} {{ user.name?.last }}
+  </h1>
+</div>
+
+<div class="bg-body-secondary container pt-3">
+  <div class="row" *ngIf="user != null">
+    <div class="col-3">
+      <img [src]="user.picture?.large" width="100%" />
+
+    </div>
+    <div class="col">
+      <p class="fw-bold">
+        Name: {{ user.name?.first }} {{ user.name?.last }}<br />
+        Gender: {{ user.gender }}<br />
+        Phone: {{ user.phone }}<br />
+        Email: {{ user.email }}<br />
+        Nationality: {{ user.nat }}<br />
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="row p-2 position-absolute top-50 start-50 translate-middle"
+    *ngIf="user == null && errorMessage == null"
+  >
+    Loading...
+    <div class="spinner-border" role="status"></div>
+  </div>
+
+
+  <div class="row mt-3 mb-3">
+    <a [routerLink]="'/'" class="btn btn-secondary">
+      <i class="fas fa-chevron-left"></i>Lista Utenti
+    </a>
+  </div>
+</div>
+
+<div
+  class="alert alert-danger position-absolute top-50 start-50 translate-middle"
+  *ngIf="errorMessage != null"
+>
+  {{ errorMessage }}
+</div>
