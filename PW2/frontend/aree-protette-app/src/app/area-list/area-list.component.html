@@ -1,0 +1,32 @@
+<!--
+<div *ngFor="let area of areaList">
+  <h2>{{area.a_nome}}</h2>
+  <p>{{area.a_descrizione}}</p>
+  <p>{{area.a_tipo_ambiente}}</p>
+  <img [src]="area.a_immagine"/>
+
+
+</div> -->
+
+<div
+  class="d-flex align-content-stretch flex-wrap justify-content-center bg-body-secondary rounded-bottom-2"
+>
+    <div
+      *ngFor="let area of areaList"
+      style="min-width: 25rem; max-width: 50rem;"
+    >
+      <div
+        class="card mb-3 shadow m-2 p-1"
+        [routerLink]="'/area/' + area.area_id"
+      >
+        <img [src]="area.a_immagine" class="card-img-top" alt="Immagine" />
+        <div class="card-body">
+          <h5 class="card-title">{{ area.a_nome }}</h5>
+          <p class="card-text">
+            <small class="text-muted">{{ area.a_tipo_ambiente }}</small>
+          </p>
+          <p class="card-text">{{ area.a_descrizione }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
